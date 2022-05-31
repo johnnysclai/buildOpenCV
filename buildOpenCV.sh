@@ -72,6 +72,8 @@ if [ $DOWNLOAD_OPENCV_EXTRAS == "YES" ] ; then
 fi
 
 # Repository setup
+apt update -y
+apt install -y software-properties-common
 apt-add-repository universe
 apt-get update
 
@@ -151,6 +153,7 @@ cd build
 echo $PWD
 time cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} \
+      -D CMAKE_LIBRARY_PATH=/usr/local/cuda/lib64/stubs \
       -D WITH_CUDA=ON \
       -D CUDA_ARCH_BIN=${ARCH_BIN} \
       -D CUDA_ARCH_PTX="" \
