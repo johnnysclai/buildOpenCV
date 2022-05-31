@@ -108,9 +108,9 @@ cd /usr/local/cuda/include
 patch -N cuda_gl_interop.h $WHEREAMI'/patches/OpenGLHeader.patch' 
 
 # Python 2.7
-apt-get install -y python-dev  python-numpy  python-py  python-pytest
+# apt-get install -y python-dev  python-numpy  python-py  python-pytest
 # Python 3.6
-apt-get install -y python3-dev python3-numpy python3-py python3-pytest
+# apt-get install -y python3-dev python3-numpy python3-py python3-pytest
 
 # GStreamer support
 apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev 
